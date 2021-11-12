@@ -1,0 +1,30 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+{% block body %}
+<head>
+    <title>재무 데이터</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<br><br>
+
+<a href="DeployModel/metrics.html" download>Download the pdf</a>
+<h2>1. 투자지표</h2><br>
+{{ metrics |safe}}
+<br><br><br>
+<h2>2. 포괄손익계산서</h2><br><br>
+{{cis |safe}}
+<br><br><br>
+<h2>3. 재무상태표</h2><br><br>
+{{ bs |safe}}
+<br><br><br>
+<h2>4. 현금흐름표</h2><br><br>
+{{ cf |safe}}
+<br><br>
+
+
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+{% block body %}
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style_home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap_sandstone.css' %}">
+    <title>데이터 입력</title>
+    <style type="text/css">
+        .box1 {
+            float: right;
+            }
+
+        .box2{
+        width: 700px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    </style>
+</head>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!------
+<section class="our-webcoderskull padding-lg">
+  <div class="container">
+    <div class="row heading heading-icon">
+        <div style="margin: 0 auto;">
+        <h3><br>Our Team<br><br><br></h3>
+        </div>
+    </div>
+
+    <ul class="row">
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="" class="img-responsive" alt=""></figure>
+            <h3><a href=""></a></h3>
+            <p></p>
+            <ul class="follow-us clearfix">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+      </li>
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="" class="img-responsive" alt=""></figure>
+            <h3><a href="#"></a></h3>
+            <p></p>
+            <ul class="follow-us clearfix">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+      </li>
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="" class="img-responsive" alt=""></figure>
+            <h3><a href="">Soyoon</a></h3>
+            <p>cute & kindness</p>
+            <ul class="follow-us clearfix">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+       </li>
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="" class="img-responsive" alt=""></figure>
+            <h3><a href=""></a></h3>
+            <p></p>
+            <ul class="follow-us clearfix">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+      </li>
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="" class="img-responsive" alt=""></figure>
+            <h3><a href=""></a></h3>
+            <p></p>
+            <ul class="follow-us clearfix">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+       </li>
+    </ul>
+  </div>
+</section>
+---------->
+
+
+<body>
+
+<br>
+<div class="box1">
+<div class="card border-secondary mb-3" id="board" style="max-width: 60rem; padding: 0 0 0.5rem; margin: 4rem 2rem">
+  <div class="card-header">
+      <div class="center"><h3>서비스 설명</h3></div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">사용방법</h5>
+    <p class="card-text">
+        1. 기업과 날짜 등의 필요 정보를 입력하면 예측을 시작합니다<br>
+        2. 예측 날짜로부터 예측 기간까지의 종가를 예측합니다<br>
+        3. 충분한 일수가 있다면 백테스팅을 수행합니다 (예측 기간 세배 이상의 훈련 기간 요구)<br>
+        4. 사용한 feature 쓰기
+    </p>
+  </div>
+    <div class="card-body">
+        <h5 class="card-title">사용 가능 모델 (모델이름 ---> "입력문자열")</h5>
+        <p class="card-text">
+            1. Linear ---> 선형상관 관계를 모델링하는 분석기법<br>
+            2. ElasticNet ---> 패털티를 선형으로 결합하는 정규화 회귀기법<br>
+            3. KNN ---> 패턴 인식에서 분류나 회귀에 사용되는 비모수 방식<br>
+            4. XGBoost(gbtree) --->  Extreme Gradient Boosting,  Ensemble 기법 중 하나<br>
+            5. LightGBM(RandomForest) ---> 배깅 랜덤과정을 추가한 lgbm<br>
+            6. LightGBM(GOSS) ---> 기울기 기반 단측 표본 추출을 적용한 lgbm<br>
+            7. ARIMA ---> 자동회귀이동평균 모델의 일반화<br>
+            8. MLP(LSTM) --->  이전 단계 정보를 memory cell에 저장하여 다음 단계로 전달하는 모델<br>
+        </p>
+    </div>
+</div>
+
+
+
+
+<!--<div class="form-group" style="margin: 0 15rem; width:300px; font-weight:bold">-->
+<!--    <label for="exampleSelect1" class="form-label mt-4">예측 가능 기업 리스트</label>-->
+<!--    <select class="form-select" id="exampleSelect1">-->
+<!--        {% for i in stock_list %}-->
+<!--            <option>{{i}}</option>-->
+<!--        {% endfor %}-->
+<!--    </select>-->
+<!--</div>-->
+
+
+<div class="box2">
+    <form action="{% url 'result' %}">
+    <fieldset>
+            <h3><div class="center"><br><br>정보 입력<br><br></div></h3>
+
+            <div class="form-group">
+                <label class="col-form-label">
+                    <div class="width:500px;font-size:50px;">1. 기업명</div>
+                </label>
+            </div>
+            <select style="width:350px; height:38px;" required name="selectedCom" id="selectBox">
+                    <option value="">기업을 선택해주세요<option>
+                    {% for i in stock_list %}
+                        <option>{{i}}</option>
+                    {% endfor %}
+            </select><br><br><br>
+
+            <div class="form-group">
+
+                <label class="col-form-label" >
+                    <div class="width:500px;font-size:20px;">2. 모델명</div>
+                </label>
+
+                <div class="style1">
+                <input type="radio" id="radioLinear" class="input-model" required name="selectedModel" value="Linear">
+                <label for="radioLinear">Linear Regression</label>&nbsp&nbsp&nbsp
+
+                <input type="radio" id="radioElastic" class="input-model" required name="selectedModel" value="ElasticNet">
+                <label for="radioElastic">Elastic Net</label>&nbsp&nbsp&nbsp
+
+                <input type="radio" id="radioKNN" class="input-model" required name="selectedModel" value="KNN">
+                <label for="radioKNN">KNN</label>&nbsp&nbsp&nbsp
+
+                <input type="radio" id="radioXGBoost" class="input-model" required name="selectedModel" value="XGB_GBT">
+                <label for="radioXGBoost">XGBoost(gbtree)</label> <br>
+
+                <input type="radio" id="radioLGB_RF" class="input-model" required name="selectedModel" value="LGB_RandomForest">
+                <label for="radioLGB_RF">LightGBM(RandomForest)</label>&nbsp&nbsp&nbsp
+
+                <input type="radio" id="radioLGB_GOSS" class="input-model" required name="selectedModel" value="LGB_GOSS">
+                <label for="radioLGB_GOSS">LightGBM(GOSS)</label>&nbsp&nbsp&nbsp
+
+                <input type="radio" id="radioARIMA" class="input-model" required name="selectedModel" value="ARIMA">
+                <label for="radioARIMA">ARIMA</label>&nbsp&nbsp&nbsp
+
+                <input type="radio" id="radioLSTM" class="input-model" required name="selectedModel" value="LSTM">
+                <label for="radioLSTM">MLP(LSTM)</label>
+                </div>
+            </div><br>
+
+            <div class="form-group">
+                <label class="col-form-label" for="예측 날짜">
+                    <div class="style2">3. 오늘 날짜</div>
+                </label>
+                <div class="style1">
+                    <input type="text" class="form-control" placeholder="(ex. 2021-10-29)"
+                           style="width:500px;font-size:20px;"
+                           id="예측 날짜" required name="예측날짜">
+                </div>
+            </div><br>
+            <div class="form-group">
+                <label class="col-form-label" for="예측 기간">
+                    <div class="style2">4. 예측 기간</div>
+                </label>
+                <div class="style1">
+                    <input type="text" class="form-control" placeholder="(ex. 20)"
+                           style="width:500px;font-size:20px;"
+                           id="예측 기간" required name="예측기간">
+                </div>
+            </div><br>
+            <div class="form-group">
+                <label class="col-form-label" for="훈련 기간">
+                    <div class="style2">5. 훈련 기간</div>
+                </label>
+                <div class="style1">
+                    <input type="text" class="form-control" placeholder="(ex. 250)"
+                           style="width:500px;font-size:20px;"
+                           id="훈련 기간" required name="훈련기간">
+                </div>
+            </div><br><br><br>
+            <div class="col text-center">
+                <button type="submit" class="btn btn-warning">예측시작</button>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <!-- value="예측 시작"
+                   style="position: relative; left:32%; margin: 2.5rem; font-size: 1.5rem" -->
+        </fieldset>
+    </form>
+</div>
+</div>
+</body>
+{% endblock %}
+</html>
